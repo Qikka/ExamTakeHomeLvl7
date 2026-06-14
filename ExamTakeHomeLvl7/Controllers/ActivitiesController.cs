@@ -3,11 +3,11 @@ using ExamTakeHomeLvl7.Models;
 
 namespace ExamTakeHomeLvl7.Controllers
 {
-    public class ActivityController : Controller
+    public class ActivitiesController : Controller
     {
         readonly ApplicationDbContext _db;
 
-        public ActivityController(ApplicationDbContext db)
+        public ActivitiesController(ApplicationDbContext db)
         {
             _db = db;
         }

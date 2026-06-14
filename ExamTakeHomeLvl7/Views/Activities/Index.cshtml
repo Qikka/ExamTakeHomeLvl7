@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ExamTakeHomeLvl7.Models.Activity>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <h2>Activities List:</h2>
+
+    <a asp-action="Create" class="btn btn-info text-white">Add New Activity</a>
+
+    <div>
+        @if (Model.Count() > 0)
+        {
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                    <th>
+                        @Html.DisplayNameFor(x => x.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(x => x.Date)
+                    </th>
+                    <th>
+                        <label>Actions: </label>
+                    </th>
+                </tr>
+                @foreach (var activity in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(x => activity.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(x => activity.Date)
+                        </td>
+                        <td>
+                            <a asp-action="Delete" asp-route-id="@activity.Id" class="btn btn-danger btn-sm">Delete Activity</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <label>Database is Empty</label>
+        }
+
+    </div>
+</div>

@@ -12,6 +12,22 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+.container {
+    font-size: 15px;
+    font-family: Arial;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #8fed8a;
+    border-color: #8fed8a;
+}
+
+input {
+    max-width: 280px;
+}
+
+
 html {
   position: relative;
   min-height: 100%;

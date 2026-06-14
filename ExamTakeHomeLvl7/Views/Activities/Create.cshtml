@@ -1,0 +1,41 @@
+﻿@model ExamTakeHomeLvl7.Models.Activity
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<br />
+<h2 class="custom-text">Add New Activity</h2>
+<br />
+
+<div class="border container" style="padding:30px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Date"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Date" class="form-control" />
+            </div>
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Create" class="btn btn-info form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-action="Index" class="btn btn-secondary form-control">Back to Activities List</a>
+            </div>
+        </div>
+    </form>
+</div>
